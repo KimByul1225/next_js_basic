@@ -7,23 +7,8 @@
     },
     {
       "id": 2,
-      "title": "css",
-      "body": "css is ..."
-    },
-    {
-      "title": "javascript",
-      "body": "javascript...",
-      "id": 3
-    },
-    {
-      "title": "react",
-      "body": "react is ...\n",
-      "id": 4
-    },
-    {
-      "title": "Next JS",
-      "body": "Next JS is ...",
-      "id": 5
+      "title": "Css",
+      "body": "Css is ..."
     }
   ],
   "posts": [

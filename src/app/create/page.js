@@ -26,7 +26,6 @@ export default function Create() {
         fetch("http://localhost:9999/topics", options)
           .then(res => res.json())
           .then(result => {
-            console.log(result);
             const lastid = result.id;
             router.refresh();
             router.push(`/read/${lastid}`);
