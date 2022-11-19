@@ -1,12 +1,17 @@
 import Link from 'next/link'
 import './globals.css'
+import { Controll } from './Controll';
 
 export const metadata = {
   title: 'Next js study',
   description: 'Next js basic',
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+
+  const res = await fetch("http://localhost:9999/topics", { cache: 'no-store' });
+  const topics = await res.json();
+
   return (
     <html>
       <body>
@@ -18,33 +23,22 @@ export default function RootLayout({ children }) {
           </Link>
         </h1>
         <ol>
-          <li>
-            <Link href="/read/1">
-              html
-            </Link>
-          </li>
-          <li>
-            <Link href="/read/2">
-              css
-            </Link>
-          </li>
+          {topics.map((topic) => {
+            return(
+              <li key={topic.id}>
+                <Link href={`/read/${topic.id}`}>
+                  {topic.title}
+                </Link>
+              </li>
+            )
+          })}
         </ol>
+        <br />
+        <hr />
         {children}
-        <ul>
-          <li>
-            <Link href="/create">
-              Create
-            </Link>
-          </li>
-          <li>
-            <Link href="/update/1">
-              Update
-            </Link>
-          </li>
-          <li>
-            <input type="button" value="delete" />
-          </li>
-        </ul>
+        <hr />
+        <br />
+        <Controll/>
       </body>
     </html>
   )
