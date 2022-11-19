@@ -6,7 +6,6 @@ import { useParams } from 'next/navigation';
 export function Controll() {
   const params = useParams();
   const id = params.id;
-  console.log("Controll", params);
 
   return (
     <>
@@ -19,7 +18,7 @@ export function Controll() {
             </Link>
           </li>
           <li>
-            <Link href="/update/1">
+            <Link href={`/update/${id}`}>
               Update
             </Link>
           </li>
