@@ -15,9 +15,9 @@ export function Controll() {
         id && 
         <ul>
           <li>
-            <Link href="/create">
-              Create
-            </Link>
+              <Link href="/create">
+                Create
+              </Link>
           </li>
           <li>
             <Link href={`/update/${id}`}>
@@ -33,7 +33,7 @@ export function Controll() {
                 const options = {
                   method: 'DELETE',
                 }
-                fetch(`http://localhost:9999/topics/${id}`, options)
+                fetch(process.env.NEXT_PUBLIC_API_URL+`topics/${id}`, options)
                   .then(res => res.json())
                   .then(result => {
                     router.refresh();
