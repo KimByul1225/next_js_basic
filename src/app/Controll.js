@@ -6,19 +6,18 @@ import { useParams, useRouter } from 'next/navigation';
 export function Controll() {
   const params = useParams();
   const router = useRouter();
-
   const id = params.id;
 
   return (
     <>
+      <div>
+        <Link href="/create">
+          Create
+        </Link>
+      </div>
       {
         id && 
         <ul>
-          <li>
-              <Link href="/create">
-                Create
-              </Link>
-          </li>
           <li>
             <Link href={`/update/${id}`}>
               Update

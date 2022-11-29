@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <h2>
-        Welcome!
+        해당 프로젝트는 NEXT JS Study를 위해 만든 샘플 프로젝트입니다.
       </h2>
       <Image
         src="/next.svg"

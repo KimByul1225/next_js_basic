@@ -19,7 +19,7 @@ export default async function RootLayout({ children }) {
           <Link
             href="/"
           >
-            WEB
+            Home
           </Link>
         </h1>
         <ol>
