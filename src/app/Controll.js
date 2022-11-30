@@ -12,7 +12,7 @@ export function Controll() {
     <>
       <div>
         <Link href="/create">
-          Create
+          글 등록 하기
         </Link>
       </div>
       {
@@ -20,13 +20,13 @@ export function Controll() {
         <ul>
           <li>
             <Link href={`/update/${id}`}>
-              Update
+              글 수정
             </Link>
           </li>
           <li>
             <input 
               type="button" 
-              value="delete" 
+              value="글 삭제" 
               onClick={(e) => {
                 e.preventDefault();
                 const options = {

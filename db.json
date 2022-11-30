@@ -9,6 +9,11 @@
       "id": 2,
       "title": "Css",
       "body": "Css is ..."
+    },
+    {
+      "title": "Javascript",
+      "body": "Javascript is ....",
+      "id": 3
     }
   ],
   "posts": [

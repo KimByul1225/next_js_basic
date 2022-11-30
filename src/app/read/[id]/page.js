@@ -5,12 +5,16 @@ export default async function Read(props) {
   return (
     <>
       <h2>
-        Read / {topic.title}
+        게시글 상세 페이지
       </h2>
-      <p>parameter : {props.params.id}</p>
+      <h3>Title : {topic.title}</h3>
+      <br />
+      <h4>상세 내용</h4>
       <div>
         {topic.body}
       </div>
+      {/* <p>parameter : {props.params.id}</p> */}
+      <br />
     </>
   )
 }

@@ -10,7 +10,7 @@ export default function Create() {
   return (
     <>
       <h2>
-        Create!
+        글 등록하기 페이지
       </h2>
       <form onSubmit={(e) => {
         e.preventDefault();
@@ -40,7 +40,7 @@ export default function Create() {
             placeholder="body"
           />
         </p>
-        <input type="submit" value="create" />
+        <input type="submit" value="등록하기" />
       </form>
     </>
   )

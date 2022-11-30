@@ -24,7 +24,7 @@ export default function Update(props) {
     return (
         <>
             <h2>
-                Update!
+                글 수정하기 페이지
             </h2>
             <form onSubmit={(e) => {
                 e.preventDefault();
@@ -62,7 +62,7 @@ export default function Update(props) {
                         onChange={e => setBody(e.target.value)}
                     />
                 </p>
-                <input type="submit" value="update" />
+                <input type="submit" value="수정하기" />
             </form>
         </>
     )
