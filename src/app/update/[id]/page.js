@@ -14,7 +14,7 @@ export default function Update(props) {
     const id = props.params.id;
 
     useEffect(() => {
-        fetch(process.env.NEXT_PUBLIC_API_URL +`/topics/${id}`, { cache: 'no-store' })
+        fetch(process.env.NEXT_PUBLIC_API_URL +`topics/${id}`, { cache: 'no-store' })
         .then(res => res.json())
         .then(result => {
             setTitle(result.title)
@@ -37,7 +37,7 @@ export default function Update(props) {
                     },
                     body: JSON.stringify({ title, body })
                 }
-                fetch(process.env.NEXT_PUBLIC_API_URL + `/topics/${id}`, options)
+                fetch(process.env.NEXT_PUBLIC_API_URL + `topics/${id}`, options)
                 .then(res => res.json())
                 .then(result => {
                     const lastid = result.id;

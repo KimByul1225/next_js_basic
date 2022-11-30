@@ -1,3 +1,7 @@
 a{
     text-decoration: none;
 }
+li{
+    line-height: 2;
+    font-size: 18px;
+}
